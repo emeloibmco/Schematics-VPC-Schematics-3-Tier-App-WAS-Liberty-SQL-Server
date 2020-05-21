@@ -1,0 +1,12 @@
+- hosts: <ip-of-vsi>
+  become: yes
+  become_method: sudo
+  remote_user: root
+
+- hosts: mssql
+  roles:
+    - {
+        role: lifeofguenter.mssql,
+        mssql_sa_password: "Password",
+        mssql_memory_memorylimitmb: "{{ (ansible_memtotal_mb * 0.8) | round | int }}",
+      }

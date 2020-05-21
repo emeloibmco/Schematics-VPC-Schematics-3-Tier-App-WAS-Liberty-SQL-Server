@@ -1,0 +1,1 @@
+<IP-VSI> ansible_connection=ssh ansible_user=root ansible_ssh_private_key_file=/etc/ansible/.ssh/<private_ssh_key>.pem
