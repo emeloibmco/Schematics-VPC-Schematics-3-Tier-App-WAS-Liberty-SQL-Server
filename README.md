@@ -1,17 +1,17 @@
-# Schematics-VPC-Schematics-3-Tier-App-Joomla
+# Schematics-VPC-Schematics-3-Tier-App-WAS-Liberty-SQL-Server
 
-Plantilla para el aprovisionamiento de recursos necesarios para el despliegue de joomla en una arquitectura VPC IBM CLoud
+Plantilla para el aprovisionamiento de la arqutectura de aplicaciones Websphere Application Server con conección SQLServer
 
 ## Requerimentos para el uso de Terraform
 
 Como caracteristicas especificas de este laboratorio se uso:
 
-*	Contar con una cuenta en IBM Cloud 💻
+*	Contar con una cuenta en IBM Cloud
 * Contar con Ansible para la ejecución local del playbook de configuración
 
 ## Indice
 
-* Acerca de joomla
+* Acerca de  WebSphere Application Server Liberty (WAS Liberty)
 * Arquitectura de implementación
 * Ejecución de la plantilla de terraform en IBM Cloud Schematics
 * Ejecución del playbook de ansible para la configuración de mysql en el virtual server
@@ -19,21 +19,18 @@ Como caracteristicas especificas de este laboratorio se uso:
 
 ---
 
-### 1. Acerca de joomla
+### 1. Acerca de WAS Liberty
 
+Mediante WebSphere Application Server Liberty, puede crear aplicaciones correspondientes a la especificación de Java EE6 Web Profile. Puede desarrollar rápidamente y desplegar aplicaciones basadas en el perfil web para que su empresa pueda responder rápidamente a las necesidades empresariales y del mercado. Las prestaciones que proporciona WebSphere Application Server Liberty Core son un subconjunto de las prestaciones que se proporcionan en las ediciones WebSphere Application Server Liberty y WebSphere Application Server Network Deployment Liberty.
 
-Joomla! es un sistema de administración de contenido (CMS) gratuito y de código abierto para publicar contenido web. Con los años Joomla! ha ganado varios premios . Se basa en un marco de aplicación web modelo-vista-controlador que se puede usar independientemente del CMS que le permite crear potentes aplicaciones en línea.
-
-Joomla! es uno de los softwares de sitios web más populares, gracias a su comunidad global de desarrolladores y voluntarios, que se aseguran de que la plataforma sea fácil de usar, ampliable, multilingüe, accesible, receptiva, optimizada para motores de búsqueda y mucho más.
-
-[referencia.](https://www.joomla.org/about-joomla.html)
+[referencia.](https://www.ibm.com/support/knowledgecenter/es/SSD28V_liberty/com.ibm.websphere.wlp.core.doc/ae/cwlp_core_about.html)
 
 ### 2. Arquitectura de implementación
 
-Con el fin de ilustrar los recursos necesarios para el despliegue de la plataforma Joomla, a continuación de muestra un diagrama.
+Con el fin de ilustrar los recursos necesarios para el despliegue ser servicio, a continuación de muestra un diagrama.
 
 <p align="center">
-<img width="500" alt="img8" src="https://user-images.githubusercontent.com/40369712/78075357-007ad900-736a-11ea-9764-5bbcecd75dc8.png">
+<img width="500" alt="img8" src="https://user-images.githubusercontent.com/40369712/82573838-e41a4200-9b4b-11ea-95df-485b674c8026.png">
 </p>
 
 ### 3. Ejecución de la plantilla de terraform en IBM Cloud Schematics
